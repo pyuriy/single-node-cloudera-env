@@ -5,7 +5,7 @@ server:
     privileged: true
     hostname: cm1.bigdata
     ports:
-        - "8022:22"     # ssh
+        - "8022:8822"     # ssh
         - "7180:7180"   # Cloudera Manager
         - "8888:8888"   # HUE
         - "11000:11000" # Oozie
