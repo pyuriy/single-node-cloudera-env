@@ -1,11 +1,13 @@
-server:
+version: '2'
+services:
+  cloudera:
     # build: .
     # image: intropro/single-node-cloudera-env:5.3.3
     image: intropro/single-node-cloudera-env:5.4.8
     privileged: true
     hostname: cm1.bigdata
     ports:
-        - "8022:8822"     # ssh
+        - "8022:22"     # ssh
         - "7180:7180"   # Cloudera Manager
         - "8888:8888"   # HUE
         - "11000:11000" # Oozie
@@ -17,3 +19,6 @@ server:
     #     - "kerberos:127.0.0.1"
     # environment:
     #     - KERBERIZED=true
+  centos:
+    image: centos:6.7   
+    command: "/usr/sbin/init"
