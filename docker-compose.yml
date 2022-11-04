@@ -19,6 +19,15 @@ services:
     #     - "kerberos:127.0.0.1"
     # environment:
     #     - KERBERIZED=true
-  centos:
-    image: centos:6.7   
-    command: "/usr/sbin/init"
+  node1:
+    image: intropro/single-node-cloudera-env:5.4.8
+    privileged: true
+    hostname: node1.bigdata
+    ports:
+        - "8022:22"     # ssh
+        - "8888:8888"   # HUE
+        - "11000:11000" # Oozie
+        - "50070:50070" # HDFS REST Namenode
+        - "80"  
+    #command: "/usr/sbin/init"
+    command: 
