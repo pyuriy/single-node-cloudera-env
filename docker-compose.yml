@@ -20,13 +20,6 @@ services:
     # environment:
     #     - KERBERIZED=true
   node1:
-    image: intropro/single-node-cloudera-env:5.4.8
+    image: docker.io/library/cdh-node:5.4.8
     privileged: true
     hostname: node1.bigdata
-    ports:
-        - "8022:22"     # ssh
-        - "8888:8888"   # HUE
-        - "11000:11000" # Oozie
-        - "50070:50070" # HDFS REST Namenode
-        - "80"  
-    #command: "/usr/sbin/init"
