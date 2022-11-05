@@ -30,4 +30,3 @@ services:
         - "50070:50070" # HDFS REST Namenode
         - "80"  
     #command: "/usr/sbin/init"
-    command: 
