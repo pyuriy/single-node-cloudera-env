@@ -12,6 +12,11 @@ ENV JCE_POLICY_DOWNLOAD_PATH http://download.oracle.com/otn-pub/java/jce/7/Unlim
 # ENV LC_ALL="en_US.UTF-8"
 ENV TERM=xterm
 
+RUN rm -rf /etc/ssh/ssh_host*
+RUN ssh-keygen -b 1024 -t rsa -f /etc/ssh/ssh_host_key -q -N ''
+RUN ssh-keygen -b 1024 -t rsa -f /etc/ssh/ssh_host_rsa_key -q -N ''
+RUN ssh-keygen -b 1024 -t dsa -f /etc/ssh/ssh_host_dsa_key -q -N ''
+
 # Update supervisord 
 ADD configs/supervisord.conf /etc/
 
