@@ -13,7 +13,7 @@ services:
         - "11000:11000" # Oozie
         - "50070:50070" # HDFS REST Namenode
         - "80"
-  node1:
-    image: docker.io/library/cdh-node:5.4.8
-    privileged: true
-    hostname: node1.bigdata
+#  node1:
+#    image: docker.io/library/cdh-node:5.4.8
+#    privileged: true
+#    hostname: node1.bigdata
