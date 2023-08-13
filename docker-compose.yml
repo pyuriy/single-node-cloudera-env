@@ -7,9 +7,10 @@ services:
     privileged: true
     hostname: cm1.bigdata
     ports:
-        - "8822:22"     # ssh
+        - "8822:8822"     # ssh
         - "7180:7180"   # Cloudera Manager
         - "8888:8888"   # HUE
+        - "8088:8088"   # YARN RM
         - "11000:11000" # Oozie
         - "50070:50070" # HDFS REST Namenode
         - "80"
